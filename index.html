@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mukiso | Product videos made for conversion on Amazon</title>
+<meta name="description" content="20-second product videos built to convert on Amazon. Flat rate. Delivered in 5 days. 2 revisions included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#452F63;
+    --coral:#E3A87C;
+    --black:#191420;
+    --white:#FFFFFF;
+    --gray:#6F6878;
+    --b:2px solid var(--black);
+    --max:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    background:#FAF7F1;
+    color:var(--black);
+    font-family:'Archivo',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--violet);color:var(--white)}
+  a{color:inherit}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .display{
+    font-family:'Archivo Black',sans-serif;font-weight:400;
+    text-transform:uppercase;letter-spacing:-.01em;line-height:.95;
+  }
+
+  /* ===== Top bar ===== */
+  .topbar{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:var(--white);
+    border-bottom:var(--b);
+  }
+  .topbar-inner{
+    max-width:var(--max);margin:0 auto;padding:0 24px;
+    display:flex;align-items:stretch;justify-content:space-between;gap:0;height:64px;
+  }
+  .brand{
+    font-family:'Archivo Black',sans-serif;font-size:1.3rem;text-transform:uppercase;
+    text-decoration:none;display:flex;align-items:center;letter-spacing:-.01em;
+  }
+  .brand span{color:var(--violet);-webkit-text-stroke:1px var(--black)}
+  .topnav{display:flex;align-items:stretch}
+  .topnav a{
+    text-decoration:none;font-weight:600;font-size:.9rem;
+    display:flex;align-items:center;padding:0 22px;
+  }
+  .topnav a:not(.nav-cta):hover{background:var(--violet);color:var(--white)}
+  .nav-cta{
+    background:var(--black);color:var(--white);
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.85rem;
+    margin-right:-24px;padding:0 28px!important;
+  }
+  .nav-cta:hover{background:var(--violet);color:var(--white)}
+  @media(max-width:720px){.topnav a:not(.nav-cta){display:none}}
+
+  /* ===== Hero ===== */
+  .hero{
+    background:var(--violet);
+    color:var(--white);
+    border-bottom:var(--b);
+    padding:158px 0 84px;
+  }
+  .hero-kicker{
+    display:flex;align-items:center;gap:14px;
+    font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;
+    margin-bottom:40px;
+  }
+  .hero-kicker::before{content:"";width:12px;height:12px;background:var(--coral);border:2px solid var(--black)}
+  .hero-grid{
+    display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:end;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem,4.9vw,4.1rem);
+    text-transform:uppercase;
+    max-width:15ch;
+  }
+  .hero h1 .hl{
+    color:var(--coral);
+  }
+  .hero-side{display:flex;flex-direction:column;gap:26px}
+  .hero-sub{font-size:1.02rem;font-weight:500;max-width:42ch}
+  .hero-sub strong{font-weight:700;background:var(--black);color:var(--white);padding:1px 7px}
+  .cta-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  @media(max-width:860px){
+    .hero{padding:140px 0 64px}
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+  }
+  .btn{
+    text-decoration:none;font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+    font-size:1rem;padding:18px 30px;border:var(--b);display:inline-block;
+    transition:transform .12s ease;
+  }
+  .btn:active{transform:translate(2px,2px)}
+  .btn-black{background:var(--black);color:var(--white);box-shadow:5px 5px 0 rgba(25,20,32,.35)}
+  .btn-black:hover{background:var(--white);color:var(--black);box-shadow:5px 5px 0 var(--black)}
+  .btn-white{background:var(--white);color:var(--black);box-shadow:5px 5px 0 var(--black)}
+  .btn-white:hover{background:var(--black);color:var(--white)}
+  .btn-violet{background:var(--violet);color:var(--black);box-shadow:5px 5px 0 var(--black)}
+  .btn-violet:hover{background:var(--black);color:var(--white)}
+  .cta-note{font-size:.85rem;font-weight:600}
+
+  /* ===== Sections ===== */
+  section{padding:100px 0;border-bottom:var(--b)}
+  .sec-label{
+    display:inline-block;background:var(--black);color:var(--white);
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.82rem;
+    padding:7px 14px;margin-bottom:24px;letter-spacing:.04em;
+  }
+  .sec-label.on-black{background:var(--violet);color:var(--black)}
+  h2.display{font-size:clamp(2.2rem,5.6vw,4rem);max-width:18ch}
+  .lede{margin-top:18px;max-width:58ch;font-size:1.08rem;color:var(--gray)}
+  .lede strong{color:var(--black);font-weight:700}
+  .sec-work .lede,.sec-process .lede{color:#B3ACBB}
+  .sec-work .lede strong,.sec-process .lede strong{color:var(--white)}
+
+  /* Work: black band, mosaic grid + filters */
+  .sec-work{background:var(--black);color:var(--white)}
+  .work-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    border:2px solid var(--white);margin-top:52px;
+  }
+  .work-card{border:1px solid var(--white);display:flex;flex-direction:column}
+  .work-frame{
+    aspect-ratio:16/9;position:relative;
+    background:repeating-linear-gradient(45deg,#201A2A,#201A2A 12px,#1A1522 12px,#1A1522 24px);
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .play{
+    width:64px;height:64px;background:var(--coral);border:2px solid var(--black);
+    display:flex;align-items:center;justify-content:center;color:var(--black);
+    transition:transform .15s ease;
+  }
+  .work-card:hover .play{transform:scale(1.1)}
+  .play svg{margin-left:3px}
+  .work-tag{
+    position:absolute;top:0;left:0;background:var(--coral);color:var(--black);
+    font-family:'Archivo Black',sans-serif;font-size:.8rem;padding:6px 12px;text-transform:uppercase;
+  }
+  .work-info{
+    border-top:1px solid var(--white);padding:16px 20px;
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  }
+  .work-info h3{font-size:1rem;font-weight:700;text-transform:uppercase}
+  .work-info span{color:var(--coral);font-size:.82rem;font-weight:700;text-transform:uppercase}
+  @media(max-width:720px){.work-grid{grid-template-columns:1fr}}
+
+  /* Stats: blue band */
+  .sec-stats{background:var(--violet);color:var(--white);padding:80px 0}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--white);background:var(--violet)}
+  .stat{padding:36px 24px;border:1px solid var(--white);text-align:center}
+  .stat-num{font-family:'Archivo Black',sans-serif;font-size:clamp(2.6rem,5.4vw,4rem);line-height:1}
+  .stat-label{font-weight:600;font-size:.92rem;margin-top:10px}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:1fr 1fr;border:var(--b);margin-top:52px}
+  .team-card{padding:38px 34px;border:1px solid var(--black)}
+  .team-card:first-child{background:var(--violet);color:var(--white)}
+  .team-card:first-child li{border-top-color:rgba(255,255,255,.45)}
+  .team-card .role{
+    font-family:'Archivo Black',sans-serif;font-size:.8rem;text-transform:uppercase;
+    background:var(--black);color:var(--white);display:inline-block;padding:4px 10px;
+  }
+  .team-card h3{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:1.6rem;text-transform:uppercase;margin:16px 0 12px;line-height:1.05}
+  .team-card > p{font-size:.96rem;font-weight:500}
+  .team-card ul{list-style:none;margin-top:18px}
+  .team-card li{font-size:.93rem;padding:11px 0;border-top:1px solid var(--black)}
+  .team-card li strong{font-weight:700}
+  .team-card:last-child li{border-top-color:#DCD6CC}
+  .team-card:last-child p, .team-card:last-child li{color:var(--gray)}
+  .team-card:last-child li strong{color:var(--black)}
+  @media(max-width:720px){.team-grid{grid-template-columns:1fr}}
+
+  /* Process: black band, numbered (it IS a sequence) */
+  .sec-process{background:var(--black);color:var(--white)}
+  .steps{border:2px solid var(--white);margin-top:52px}
+  .step{
+    display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--white);
+  }
+  .step:last-child{border-bottom:none}
+  .step-num{
+    font-family:'Archivo Black',sans-serif;font-size:2.2rem;color:var(--coral);
+    border-right:1px solid var(--white);display:flex;align-items:center;justify-content:center;
+    padding:26px 0;
+  }
+  .step-body{padding:28px 30px}
+  .step-body h3{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:1.15rem;text-transform:uppercase;margin-bottom:8px}
+  .step-body p{color:#A9A9A2;font-size:.95rem}
+  @media(max-width:600px){.step{grid-template-columns:70px 1fr}.step-num{font-size:1.5rem}}
+
+  /* Pricing */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);border:var(--b);margin-top:52px}
+  .price-card{padding:38px 32px;border:1px solid var(--black);display:flex;flex-direction:column}
+  .price-card.featured{background:var(--violet);color:var(--white)}
+  .price-tier{font-family:'Archivo Black',sans-serif;font-size:.85rem;text-transform:uppercase}
+  .price{font-family:'Archivo Black',sans-serif;font-size:3rem;margin:14px 0 4px;line-height:1}
+  .price small{font-family:'Archivo';font-size:1rem;font-weight:600}
+  .price-card ul{list-style:none;margin:22px 0 30px;flex:1}
+  .price-card li{padding:11px 0;border-top:1px solid var(--black);font-size:.93rem;color:var(--gray)}
+  .price-card.featured li{color:var(--white)}
+  .price-card.featured li strong{color:var(--white)}
+  .price-card li strong{color:var(--black);font-weight:700}
+  .price-card .btn{text-align:center;font-size:.9rem;padding:16px 20px}
+  @media(max-width:860px){.price-grid{grid-template-columns:1fr}}
+
+  /* FAQ */
+  .faq{border:var(--b);margin-top:52px;max-width:820px}
+  .faq details{border-bottom:1px solid var(--black)}
+  .faq details:last-child{border-bottom:none}
+  .faq summary{
+    cursor:pointer;padding:22px 26px;font-weight:700;font-size:1rem;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"+";font-family:'Archivo Black',sans-serif;font-size:1.3rem;flex:0 0 auto;
+    width:34px;height:34px;border:var(--b);display:flex;align-items:center;justify-content:center;
+    background:var(--violet);color:var(--white);
+  }
+  .faq details[open] summary::after{content:"–";background:var(--black);color:var(--coral)}
+  .faq details[open] summary{background:#F4EFE7}
+  .faq .answer{padding:0 26px 24px;color:var(--gray);font-size:.95rem;max-width:64ch}
+
+  /* Contact: blue band */
+  .sec-contact{background:var(--violet);color:var(--white);border-bottom:none}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .contact-form{background:var(--white);border:var(--b);padding:36px 32px;box-shadow:8px 8px 0 var(--black)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .form-grid .full{grid-column:1 / -1}
+  label{display:block;font-weight:700;font-size:.82rem;text-transform:uppercase;margin-bottom:6px}
+  input,textarea{
+    width:100%;border:var(--b);padding:13px 14px;
+    font-family:inherit;font-size:.95rem;background:var(--white);
+  }
+  input:focus,textarea:focus{outline:3px solid var(--violet)}
+  textarea{min-height:110px;resize:vertical}
+  .form-grid .btn{border:var(--b);cursor:pointer;font-family:'Archivo Black';width:100%;background:var(--black);color:var(--white)}
+  .form-grid .btn:hover{background:var(--violet);color:var(--white)}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+  @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+
+  footer{background:var(--black);color:var(--white);padding:30px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:var(--white);text-decoration:none;font-weight:600}
+  footer a:hover{color:var(--coral)}
+  footer nav{display:flex;gap:24px}
+
+  :focus-visible{outline:3px solid var(--black);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">Mukiso<span>.</span></a>
+    <nav class="topnav">
+      <a href="#work">Work</a>
+      <a href="#process">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="hero-kicker">Product videos for Amazon</p>
+    <div class="hero-grid">
+      <h1 class="display">Videos made to <span class="hl">convert.</span> Not just to look good.</h1>
+      <div class="hero-side">
+        <p class="hero-sub">
+          20-second product videos for Amazon listings, built to sell.
+          <strong>We're not experimenting with AI. We're excelling at it.</strong>
+          Flat rate. Delivered in 5 days. 2 revisions included.
+        </p>
+        <div class="cta-col">
+          <a class="btn btn-black" href="#pricing">$500 flat rate</a>
+          <span class="cta-note">50% upfront, 50% on delivery. No quotes, no meetings.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="team">
+  <div class="wrap">
+    <span class="sec-label">Who's behind it</span>
+    <h2 class="display">An Amazon expert. A filmmaker. Joined forces.</h2>
+    <p class="lede">
+      Two specialists who joined powers to deliver the best product video on the market.
+      <strong>One knows exactly why Amazon shoppers buy. The other knows exactly how to put
+      it on screen.</strong> Most agencies have one of these skills. Conversion takes both.
+    </p>
+    <div class="team-grid">
+      <div class="team-card">
+        <span class="role">Strategy</span>
+        <h3>The Amazon expert</h3>
+        <p>Every video is briefed by someone with experience on all three sides of the business:</p>
+        <ul>
+          <li><strong>As a seller,</strong> running listings with their own money on the line</li>
+          <li><strong>At an agency,</strong> managing accounts across categories</li>
+          <li><strong>In-house,</strong> owning a brand's Amazon channel from the inside</li>
+        </ul>
+      </div>
+      <div class="team-card">
+        <span class="role">Production</span>
+        <h3>The filmmaker</h3>
+        <p>A professional videomaker at the front edge of AI production. Not experimenting, excelling:</p>
+        <ul>
+          <li><strong>Premium product shots:</strong> clean, cinematic, label-sharp in every frame</li>
+          <li><strong>Built for mute:</strong> overlays and pacing designed for silent autoplay</li>
+          <li><strong>Amazon-compliant:</strong> correct specs, no claims that get videos rejected</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="sec-work">
+  <div class="wrap">
+    <span class="sec-label on-black">The work</span>
+    <h2 class="display">Every frame earns its place</h2>
+    <p class="lede">
+      Premium, cinematic, and engineered to sell. <strong>Every video communicates
+      fully on mute</strong>, because that's how Amazon shoppers watch.
+    </p>
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-frame"><span class="work-tag">20s</span><span class="play"><svg width="22" height="22" viewBox="0 0 18 18" fill="currentColor"><path d="M4 2l12 7-12 7z"/></svg></span></div>
+        <div class="work-info"><h3>Skincare · Facial oil</h3><span>Desire-led</span></div>
+      </div>
+      <div class="work-card">
+        <div class="work-frame"><span class="work-tag">20s</span><span class="play"><svg width="22" height="22" viewBox="0 0 18 18" fill="currentColor"><path d="M4 2l12 7-12 7z"/></svg></span></div>
+        <div class="work-info"><h3>Workwear · FR gear</h3><span>Identity-led</span></div>
+      </div>
+      <div class="work-card">
+        <div class="work-frame"><span class="work-tag">20s</span><span class="play"><svg width="22" height="22" viewBox="0 0 18 18" fill="currentColor"><path d="M4 2l12 7-12 7z"/></svg></span></div>
+        <div class="work-info"><h3>Supplement · Beverage</h3><span>Desire-led</span></div>
+      </div>
+      <div class="work-card">
+        <div class="work-frame"><span class="work-tag">20s</span><span class="play"><svg width="22" height="22" viewBox="0 0 18 18" fill="currentColor"><path d="M4 2l12 7-12 7z"/></svg></span></div>
+        <div class="work-info"><h3>Sunscreen · Outdoor</h3><span>Identity-led</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-stats">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="stat-num">20s</div><div class="stat-label">The length that converts</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Business days to delivery</div></div>
+      <div class="stat"><div class="stat-num">$500</div><div class="stat-label">Flat, all included</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Revisions included, rarely needed</div></div>
+    </div>
+  </div>
+</div>
+
+
+<section id="process" class="sec-process">
+  <div class="wrap">
+    <span class="sec-label on-black">How it works</span>
+    <h2 class="display">Listing in. Video out. 5 days.</h2>
+    <p class="lede">No creative decks, no scope creep. Everything runs by email.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Send your listing</h3>
+          <p>Pay 50% and fill a short intake form: your Amazon listing URL, your main competitor, and where you think buyers hesitate. That's all we need.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>We read your buyer</h3>
+          <p>We study your listing, your reviews, and your competitors like a seller would, then define the angle that makes shoppers buy. Production runs against our internal conversion checklist.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Delivery in 5 days</h3>
+          <p>Your video arrives ready to upload: 1920x1080, MP4, fully Amazon-compliant. Two revision rounds included, and most clients approve the first cut without using them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <span class="sec-label">Pricing</span>
+    <h2 class="display">Flat rate. No quotes, no surprises.</h2>
+    <p class="lede">Every option is 50% upfront, 50% on delivery. Every video includes a listing thumbnail.</p>
+    <div class="price-grid">
+      <div class="price-card featured">
+        <span class="price-tier">Single video · Start here</span>
+        <p class="price">$500 <small>flat</small></p>
+        <ul>
+          <li><strong>1x</strong> 20-second video + thumbnail</li>
+          <li><strong>2 revisions</strong> included</li>
+          <li><strong>5 business days</strong> delivery</li>
+          <li>Start today by email</li>
+        </ul>
+        <a class="btn btn-black" href="#">Start with one video</a>
+      </div>
+      <div class="price-card">
+        <span class="price-tier">3-video pack</span>
+        <p class="price">$1,299 <small>flat</small></p>
+        <ul>
+          <li><strong>3x</strong> 20-second videos + thumbnails</li>
+          <li><strong>2 revisions</strong> per video</li>
+          <li><strong>7 business days</strong> delivery</li>
+          <li>Best for variations or a product line</li>
+        </ul>
+        <a class="btn btn-white" href="#">Get the 3-pack</a>
+      </div>
+      <div class="price-card">
+        <span class="price-tier">Monthly retainer</span>
+        <p class="price">$1,800 <small>/mo</small></p>
+        <ul>
+          <li><strong>4x</strong> 20-second videos per month</li>
+          <li><strong>Unlimited</strong> revisions</li>
+          <li><strong>3-day</strong> turnaround + Slack channel</li>
+          <li>For brands and agencies</li>
+        </ul>
+        <a class="btn btn-white" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="sec-label">Questions</span>
+    <h2 class="display">Before you ask</h2>
+    <div class="faq">
+      <details>
+        <summary>What do you need from me to start?</summary>
+        <p class="answer">Your Amazon listing URL and five minutes on our intake form. We pull everything else from your listing, your reviews, and your competitors. If you have existing footage or brand assets, we can use them, but we don't need them.</p>
+      </details>
+      <details>
+        <summary>Do I need to get on a call?</summary>
+        <p class="answer">Only if you want. Everything runs by email: pay, fill the intake form, receive your video. If you'd rather talk something through first, get in touch and we'll set it up.</p>
+      </details>
+      <details>
+        <summary>What exactly do I receive?</summary>
+        <p class="answer">A 20-second MP4 in 1920x1080 (H.264), fully compliant with Amazon's video requirements, plus a thumbnail for your listing. Ready to upload the day you receive it.</p>
+      </details>
+      <details>
+        <summary>How do revisions work?</summary>
+        <p class="answer">Two revision rounds are included with every video. Most clients approve the first cut without any revisions. If you have notes, send them by email and we'll deliver the updated cut.</p>
+      </details>
+      <details>
+        <summary>Will the video pass Amazon's review?</summary>
+        <p class="answer">Yes. Compliance is built into our checklist: no superlative claims, no URLs, no QR codes, no watermarks, correct format and resolution. We've studied the rejection reasons so you don't have to.</p>
+      </details>
+      <details>
+        <summary>I run an agency. Can I offer this to my clients?</summary>
+        <p class="answer">Yes. We partner with Amazon agencies and handle all production while you keep the client relationship. Get in touch and we'll set up the partnership.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec-contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="sec-label">Get in touch</span>
+        <h2 class="display">Your product deserves a video that sells it</h2>
+        <p class="lede" style="color:#E2E7FF">Tell us about your product and we'll reply within one business day. <strong style="color:#fff">No meetings, no pitch decks. Just your video.</strong></p>
+      </div>
+      <div class="contact-form">
+        <form class="form-grid" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="brand">Brand or company</label>
+            <input type="text" id="brand" name="brand">
+          </div>
+          <div>
+            <label for="listing">Amazon listing URL</label>
+            <input type="url" id="listing" name="listing" placeholder="https://amazon.com/dp/...">
+          </div>
+          <div class="full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your product and what you need"></textarea>
+          </div>
+          <div class="full">
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Mukiso. Videos made for conversion.</span>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:hello@mukisostudio.com">hello@mukisostudio.com</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
