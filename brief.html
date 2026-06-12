@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Brief | Mukiso</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#452F63;
+    --coral:#E3A87C;
+    --black:#191420;
+    --white:#FFFFFF;
+    --gray:#6F6878;
+    --b:2px solid var(--black);
+    --max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:#FAF7F1;
+    color:var(--black);
+    font-family:'Archivo',system-ui,sans-serif;
+    font-size:17px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--violet);color:var(--white)}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .display{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05}
+
+  header{background:var(--violet);color:var(--white);border-bottom:var(--b);padding:0}
+  .topbar{border-bottom:1px solid rgba(255,255,255,.25)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Archivo Black',sans-serif;font-size:1.3rem;text-transform:uppercase;text-decoration:none;letter-spacing:-.01em}
+  .brand span{color:var(--coral)}
+  .topbar a.back{font-size:.85rem;font-weight:600;text-decoration:none;opacity:.85}
+  .topbar a.back:hover{opacity:1}
+  .head{padding:64px 0 56px}
+  .kicker{
+    display:flex;align-items:center;gap:14px;
+    font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;
+    margin-bottom:26px;
+  }
+  .kicker::before{content:"";width:12px;height:12px;background:var(--coral);border:2px solid var(--black)}
+  .head h1{font-size:clamp(2rem,5vw,3rem)}
+  .head p{margin-top:16px;max-width:52ch;color:#D8D2E0;font-size:1rem}
+  .head p strong{color:var(--white)}
+
+  main{padding:64px 0 90px}
+  .group{margin-bottom:52px}
+  .group-label{
+    display:inline-block;background:var(--black);color:var(--white);
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.78rem;
+    padding:6px 12px;margin-bottom:26px;letter-spacing:.04em;
+  }
+  .field{margin-bottom:26px}
+  label{display:block;color:var(--black);font-weight:700;font-size:.95rem;margin-bottom:4px}
+  .hint{display:block;color:var(--gray);font-size:.86rem;margin-bottom:9px}
+  .opt{color:#9A93A3;font-weight:500}
+  input,textarea{
+    width:100%;border:var(--b);padding:13px 14px;
+    font-family:inherit;font-size:.95rem;background:var(--white);color:var(--black);
+  }
+  input:focus,textarea:focus{outline:3px solid var(--coral)}
+  ::placeholder{color:#9A93A3}
+  textarea{min-height:104px;resize:vertical}
+  textarea.short{min-height:72px}
+
+  .submit-row{margin-top:14px}
+  .btn{
+    display:inline-block;border:var(--b);cursor:pointer;
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:1rem;
+    padding:18px 34px;background:var(--black);color:var(--white);
+    box-shadow:5px 5px 0 rgba(25,20,32,.35);transition:transform .12s ease;
+  }
+  .btn:hover{background:var(--violet)}
+  .btn:active{transform:translate(2px,2px)}
+  .submit-note{margin-top:14px;color:var(--gray);font-size:.85rem}
+
+  footer{border-top:var(--b);padding:28px 0;color:var(--gray);font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:var(--gray);text-decoration:none}
+  footer a:hover{color:var(--black)}
+  :focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html">Mukiso<span>.</span></a>
+      <a class="back" href="index.html">mukisostudio.com</a>
+    </div>
+  </div>
+  <div class="head">
+    <div class="wrap">
+      <p class="kicker">Video brief</p>
+      <h1 class="display">Tell us about your product</h1>
+      <p>Takes about 5 minutes. <strong>The more specific your answers, the better your video converts.</strong> We read every word before we write a single scene.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <form action="https://formspree.io/f/meewrvrb" method="POST">
+      <input type="hidden" name="_subject" value="New Video Brief — Mukiso">
+      <input type="hidden" name="form-type" value="video-brief">
+
+      <div class="group">
+        <span class="group-label">01 · The basics</span>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
+        <div class="field">
+          <label for="brand">Brand name</label>
+          <input type="text" id="brand" name="brand" placeholder="Your brand" required>
+        </div>
+        <div class="field">
+          <label for="listing">Amazon listing URL</label>
+          <input type="text" id="listing" name="listing" placeholder="https://amazon.com/dp/..." required>
+        </div>
+        <div class="field">
+          <label for="website">Website <span class="opt">(optional)</span></label>
+          <input type="text" id="website" name="website" placeholder="https://yourbrand.com">
+        </div>
+        <div class="field">
+          <label for="instagram">Instagram <span class="opt">(optional)</span></label>
+          <input type="text" id="instagram" name="instagram" placeholder="@yourbrand">
+        </div>
+      </div>
+
+      <div class="group">
+        <span class="group-label">02 · Your brand</span>
+        <div class="field">
+          <label for="buyer">Who is your ideal buyer?</label>
+          <span class="hint">Age, lifestyle, what they care about.</span>
+          <textarea id="buyer" name="ideal-buyer" required></textarea>
+        </div>
+        <div class="field">
+          <label for="competitor">Who is your main competitor(s)?</label>
+          <span class="hint">Paste their listing links if possible.</span>
+          <textarea class="short" id="competitor" name="competitors" required></textarea>
+        </div>
+        <div class="field">
+          <label for="personality">Describe your brand's personality in 3 words</label>
+          <input type="text" id="personality" name="brand-personality" placeholder="e.g., premium, playful, rugged">
+        </div>
+      </div>
+
+      <div class="group">
+        <span class="group-label">03 · Requirements</span>
+        <div class="field">
+          <label for="musts">Anything the video MUST include, or must NOT include? <span class="opt">(optional)</span></label>
+          <span class="hint">Mandatory claims, restricted words, legal requirements.</span>
+          <textarea class="short" id="musts" name="must-include"></textarea>
+        </div>
+        <div class="field">
+          <label for="extra">Anything else we should know? <span class="opt">(optional)</span></label>
+          <textarea class="short" id="extra" name="anything-else"></textarea>
+        </div>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn" type="submit">Send brief</button>
+        <p class="submit-note">We'll review your listing and reply with your video's angle within one business day.</p>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Mukiso. Videos made for conversion.</span>
+    <a href="mailto:hello@mukisostudio.com">hello@mukisostudio.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
