@@ -246,6 +246,7 @@
   .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .form-grid .full{grid-column:1 / -1}
   label{display:block;color:var(--black);font-weight:700;font-size:.82rem;text-transform:uppercase;margin-bottom:6px}
+  .opt{color:#9A93A3;font-weight:500;text-transform:none;letter-spacing:0}
   input,textarea{
     width:100%;border:var(--b);padding:13px 14px;
     font-family:inherit;font-size:.95rem;background:var(--white);color:var(--black);
@@ -502,12 +503,12 @@
             <input type="email" id="email" name="email" placeholder="you@company.com" required>
           </div>
           <div>
-            <label for="brand">Brand or company</label>
+            <label for="brand">Brand or company <span class="opt">(optional)</span></label>
             <input type="text" id="brand" name="brand" placeholder="Your brand name">
           </div>
           <div>
-            <label for="listing">Amazon listing URL</label>
-            <input type="url" id="listing" name="listing" placeholder="https://amazon.com/dp/...">
+            <label for="listing">Amazon listing URL <span class="opt">(optional)</span></label>
+            <input type="text" id="listing" name="listing" placeholder="https://amazon.com/dp/...">
           </div>
           <div class="full">
             <label for="message">Message</label>
