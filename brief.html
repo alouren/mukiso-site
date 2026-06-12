@@ -80,6 +80,14 @@
   .btn:active{transform:translate(2px,2px)}
   .submit-note{margin-top:14px;color:var(--gray);font-size:.85rem}
 
+  .success{display:none;text-align:left;border:var(--b);background:var(--white);padding:44px 38px;box-shadow:6px 6px 0 rgba(25,20,32,.3)}
+  .success.show{display:block}
+  .success .kicker{color:var(--black)}
+  .success h2{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.7rem;margin-bottom:14px;letter-spacing:-.01em}
+  .success p{color:var(--gray)}
+  .success p strong{color:var(--black)}
+  .form-error{display:none;margin-top:14px;border:2px solid #B3261E;background:#FDECEA;color:#B3261E;font-weight:600;font-size:.9rem;padding:12px 14px}
+  .form-error.show{display:block}
   footer{border-top:var(--b);padding:28px 0;color:var(--gray);font-size:.85rem}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   footer a{color:var(--gray);text-decoration:none}
@@ -107,7 +115,7 @@
 
 <main>
   <div class="wrap">
-    <form action="https://formspree.io/f/meewrvrb" method="POST">
+    <form id="brief-form" action="https://formspree.io/f/meewrvrb" method="POST">
       <input type="hidden" name="_subject" value="New Video Brief — Mukiso">
       <input type="hidden" name="form-type" value="video-brief">
 
@@ -173,8 +181,16 @@
       <div class="submit-row">
         <button class="btn" type="submit">Send brief</button>
         <p class="submit-note">We'll review your listing and reply with your video's angle within one business day.</p>
+        <p class="form-error" id="form-error">Something went wrong sending your brief. Please try again, or email it to hello@mukisostudio.com.</p>
       </div>
     </form>
+
+    <div class="success" id="success">
+      <p class="kicker">Brief received</p>
+      <h2>Thank you. We're on it.</h2>
+      <p><strong>We'll review your listing and reply with your video's angle within one business day.</strong> Keep an eye on your inbox for an email from hello@mukisostudio.com.</p>
+      <p style="margin-top:12px">You can close this tab now.</p>
+    </div>
   </div>
 </main>
 
@@ -185,5 +201,31 @@
   </div>
 </footer>
 
+<script>
+  const form = document.getElementById('brief-form');
+  const success = document.getElementById('success');
+  const errorBox = document.getElementById('form-error');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorBox.classList.remove('show');
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Sending...';
+    try{
+      const res = await fetch(form.action, {
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      });
+      if(res.ok){
+        form.style.display = 'none';
+        success.classList.add('show');
+        window.scrollTo({top:0, behavior:'smooth'});
+      } else { throw new Error(); }
+    }catch(err){
+      errorBox.classList.add('show');
+      btn.disabled = false; btn.textContent = 'Send brief';
+    }
+  });
+</script>
 </body>
 </html>
