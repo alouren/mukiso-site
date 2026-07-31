@@ -27,6 +27,10 @@
 
 @media(max-width:720px){#work-grid{grid-template-columns:1fr !important}}
 @media(max-width:820px){.contact-grid{grid-template-columns:1fr !important}}
+@media(max-width:820px){
+  #reel-stage{height:auto !important; aspect-ratio:16/9;}
+  #reel-video{position:relative !important; object-fit:contain !important;}
+}
 </style>
 </head>
 <body>
@@ -59,7 +63,7 @@
 
   <!-- SHOWREEL -->
   <section id="showreel" style="border-bottom: 2px solid #191420; background: #191420;">
-    <div style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+    <div id="reel-stage" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
       <video id="reel-video" src="reel.mp4" poster="reel.jpg" playsinline preload="metadata" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #191420;"></video>
       <div id="reel-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2;">
         <span style="width: 104px; height: 104px; border-radius: 50%; background: rgba(227,168,124,0.95); backdrop-filter: blur(2px); box-shadow: 0 8px 30px rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; color: #191420; transition: transform 0.15s ease, background 0.15s ease;"><svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5c0-.8.87-1.28 1.54-.86l9 5.5c.63.39.63 1.33 0 1.72l-9 5.5c-.67.42-1.54-.06-1.54-.86v-11z"/></svg></span>
