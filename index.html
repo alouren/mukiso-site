@@ -32,6 +32,7 @@
   #reel-video{position:relative !important; object-fit:contain !important;}
 }
 @media(max-width:680px){
+  #hero { padding: 104px 0 60px !important; }
   #topbar nav a.h1, #topbar nav a.h2, #topbar nav a.h3 { display:none !important; }
   #topbar nav a.h4 { margin-right:0 !important; padding:0 18px !important; }
   #site-footer .foot-inner { flex-direction:column !important; align-items:center !important; text-align:center !important; gap:18px !important; }
@@ -73,7 +74,7 @@
     <div id="reel-stage" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
       <video id="reel-video" src="reel.mp4" poster="reel.jpg" playsinline preload="metadata" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #191420;"></video>
       <div id="reel-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2;">
-        <span style="width: 104px; height: 104px; border-radius: 50%; background: rgba(227,168,124,0.95); backdrop-filter: blur(2px); box-shadow: 0 8px 30px rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; color: #191420; transition: transform 0.15s ease, background 0.15s ease;"><svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5c0-.8.87-1.28 1.54-.86l9 5.5c.63.39.63 1.33 0 1.72l-9 5.5c-.67.42-1.54-.06-1.54-.86v-11z"/></svg></span>
+        <span style="width: 130px; height: 130px; border-radius: 50%; border: 10px solid #FFFFFF; background: rgba(0,0,0,0.12); box-shadow: 0 8px 30px rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; color: #FFFFFF; transition: transform 0.15s ease;"><svg width="74" height="74" viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="margin-left: 5px;"><path d="M32 20 L80 50 L32 80 Z"/></svg></span>
       </div>
       <span style="position: absolute; bottom: 24px; left: 0; right: 0; text-align: center; color: #FFFFFF; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-shadow: 0 2px 10px rgba(0,0,0,.6); pointer-events: none; z-index: 2;">Press play, sound on</span>
     </div>
@@ -147,28 +148,28 @@
         <div class="h6" style="border: 1px solid #FFFFFF; display: flex; flex-direction: column;" >
           <div class="work-tile" style="aspect-ratio: 16/9; position: relative; background: #161311; overflow: hidden; cursor: pointer;">
             <video class="work-vid" src="revello.mp4" poster="revello.jpg" playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:58px; height:58px; border-radius:50%; background:rgba(227,168,124,0.95); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#191420;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5c0-.8.87-1.28 1.54-.86l9 5.5c.63.39.63 1.33 0 1.72l-9 5.5c-.67.42-1.54-.06-1.54-.86v-11z"/></svg></span></span>
+            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:82px; height:82px; border-radius:50%; border:6px solid #FFFFFF; background:rgba(0,0,0,0.12); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#FFFFFF;"><svg width="50" height="50" viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="margin-left:3px;"><path d="M32 20 L80 50 L32 80 Z"/></svg></span></span>
           </div>
           <div style="border-top: 1px solid #FFFFFF; padding: 16px 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase;">Beverage</h3></div>
         </div>
         <div class="h7" style="border: 1px solid #FFFFFF; display: flex; flex-direction: column;" >
           <div class="work-tile" style="aspect-ratio: 16/9; position: relative; background: #161311; overflow: hidden; cursor: pointer;">
             <video class="work-vid" src="pizza.mp4" poster="pizza.jpg" playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:58px; height:58px; border-radius:50%; background:rgba(227,168,124,0.95); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#191420;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5c0-.8.87-1.28 1.54-.86l9 5.5c.63.39.63 1.33 0 1.72l-9 5.5c-.67.42-1.54-.06-1.54-.86v-11z"/></svg></span></span>
+            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:82px; height:82px; border-radius:50%; border:6px solid #FFFFFF; background:rgba(0,0,0,0.12); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#FFFFFF;"><svg width="50" height="50" viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="margin-left:3px;"><path d="M32 20 L80 50 L32 80 Z"/></svg></span></span>
           </div>
           <div style="border-top: 1px solid #FFFFFF; padding: 16px 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase;">Food</h3></div>
         </div>
         <div class="h8" style="border: 1px solid #FFFFFF; display: flex; flex-direction: column;" >
           <div class="work-tile" style="aspect-ratio: 16/9; position: relative; background: #161311; overflow: hidden; cursor: pointer;">
             <video class="work-vid" src="seamarie.mp4" poster="seamarie.jpg" playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:58px; height:58px; border-radius:50%; background:rgba(227,168,124,0.95); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#191420;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5c0-.8.87-1.28 1.54-.86l9 5.5c.63.39.63 1.33 0 1.72l-9 5.5c-.67.42-1.54-.06-1.54-.86v-11z"/></svg></span></span>
+            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:82px; height:82px; border-radius:50%; border:6px solid #FFFFFF; background:rgba(0,0,0,0.12); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#FFFFFF;"><svg width="50" height="50" viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="margin-left:3px;"><path d="M32 20 L80 50 L32 80 Z"/></svg></span></span>
           </div>
           <div style="border-top: 1px solid #FFFFFF; padding: 16px 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase;">Accessories</h3></div>
         </div>
         <div class="h9" style="border: 1px solid #FFFFFF; display: flex; flex-direction: column;" >
           <div class="work-tile" style="aspect-ratio: 16/9; position: relative; background: #161311; overflow: hidden; cursor: pointer;">
             <video class="work-vid" src="skinformed.mp4" poster="skinformed.jpg" playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:58px; height:58px; border-radius:50%; background:rgba(227,168,124,0.95); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#191420;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5c0-.8.87-1.28 1.54-.86l9 5.5c.63.39.63 1.33 0 1.72l-9 5.5c-.67.42-1.54-.06-1.54-.86v-11z"/></svg></span></span>
+            <span class="work-play" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;"><span style="width:82px; height:82px; border-radius:50%; border:6px solid #FFFFFF; background:rgba(0,0,0,0.12); box-shadow:0 6px 20px rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; color:#FFFFFF;"><svg width="50" height="50" viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="margin-left:3px;"><path d="M32 20 L80 50 L32 80 Z"/></svg></span></span>
           </div>
           <div style="border-top: 1px solid #FFFFFF; padding: 16px 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase;">Skincare</h3></div>
         </div>
