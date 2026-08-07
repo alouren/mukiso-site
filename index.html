@@ -39,6 +39,25 @@
   #site-footer .foot-nav { flex-wrap:wrap !important; justify-content:center !important; gap:14px 18px !important; }
   #site-footer .foot-nav a { font-size:0.82rem !important; }
 }
+#cmp-wrap { margin-top:52px; overflow-x:auto; -webkit-overflow-scrolling:touch; border:2px solid #191420; }
+#cmp-table { width:100%; min-width:660px; border-collapse:collapse; background:#FFFFFF; }
+#cmp-table th, #cmp-table td { padding:15px 12px; text-align:center; font-size:0.9rem; border-top:1px solid #EDE7DD; border-left:1px solid #EDE7DD; }
+#cmp-table th:first-child, #cmp-table td:first-child { text-align:left; border-left:none; position:sticky; left:0; z-index:1; font-family:'Archivo Black',sans-serif; text-transform:uppercase; font-size:0.82rem; min-width:132px; }
+#cmp-table thead th { background:#452F63; color:#FFFFFF; font-family:'Archivo Black',sans-serif; text-transform:uppercase; font-size:0.76rem; letter-spacing:0.03em; border-top:none; border-bottom:2px solid #191420; border-left:1px solid #5A417A; line-height:1.15; }
+#cmp-table thead th:first-child { background:#452F63; color:#FFFFFF; z-index:3; border-left:none; }
+#cmp-table .mukiso-row td { background:#F6DFC9; color:#191420; font-weight:700; border-top:1px solid #EDE7DD; }
+#cmp-table .mukiso-row td:first-child { background:#F6DFC9; color:#191420; z-index:2; }
+#cmp-table tbody td { color:#7A7280; background:#FFFFFF; }
+#cmp-table tbody td:first-child { background:#FAF7F1; color:#191420; }
+#cmp-table .weak { color:#7A7280 !important; }
+#cmp-table .mid { color:#7A7280 !important; }
+#cmp-table .ico { display:inline-flex; flex-direction:column; align-items:center; gap:5px; justify-content:center; line-height:1.15; }
+#cmp-table .ico svg { flex:none; }
+.ico-pos { color:#2E9E5B; }
+.ico-neg { color:#CC4B3C; }
+.ico-neu { color:#B7AFA3; }
+.cmp-hint { margin-top:14px; font-size:0.8rem; color:#A59A8C; text-align:center; }
+@media(min-width:781px){ .cmp-hint{ display:none; } }
 </style>
 </head>
 <body>
@@ -71,7 +90,7 @@
 
   <!-- SHOWREEL -->
   <section id="showreel" style="border-bottom: 2px solid #191420; background: #191420;">
-    <div id="reel-stage" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+    <div id="reel-stage" style="position: relative; width: 100%; height: 85vh; overflow: hidden;">
       <video id="reel-video" src="reel.mp4" poster="reel.jpg" playsinline preload="metadata" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #191420;"></video>
       <div id="reel-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2;">
         <span style="width: 130px; height: 130px; border-radius: 50%; border: 10px solid #FFFFFF; background: rgba(0,0,0,0.12); box-shadow: 0 8px 30px rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; color: #FFFFFF; transition: transform 0.15s ease;"><svg width="74" height="74" viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="margin-left: 5px;"><path d="M32 20 L80 50 L32 80 Z"/></svg></span>
@@ -102,6 +121,70 @@
           <p style="font-size: 0.96rem; line-height: 1.5; color: #E8E2F0;">The difference between tacky and excellent is thinner than most realize. AI is the tool. The judgment to land on the right side of that line is what sets the work apart.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section id="compare" style="padding: 100px 0; border-bottom: 2px solid #191420; background: #FAF7F1;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
+      <span style="display: inline-block; background: #452F63; color: #FFFFFF; font-family: 'Archivo Black', sans-serif; text-transform: uppercase; font-size: 0.82rem; padding: 7px 14px; margin-bottom: 24px; letter-spacing: 0.04em;">Why Mukiso</span>
+      <h2 style="font-family: 'Archivo Black', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.98; font-size: clamp(2.2rem, 5.6vw, 4rem); max-width: 20ch;">Better on <span style="color: #C77A3E;">every front.</span></h2>
+      <p style="margin-top: 20px; max-width: 60ch; font-size: 1.1rem; line-height: 1.55; color: #6F6878;">The alternatives ask you to settle for less. This is what you get instead.</p>
+
+      <div id="cmp-wrap">
+        <table id="cmp-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Quality</th>
+              <th>Cost</th>
+              <th>Turnaround</th>
+              <th>Amazon<br>expertise</th>
+              <th>Your<br>effort</th>
+              <th>Any<br>scene</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="mukiso-row">
+              <td>Mukiso</td>
+              <td><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>High</span></td>
+              <td><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>$500</span></td>
+              <td><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Days</span></td>
+              <td><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built in</span></td>
+              <td><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Minimal</span></td>
+              <td><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+            </tr>
+            <tr>
+              <td>DIY with AI</td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Needs practice</span></td>
+              <td class="mid"><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Low</span></td>
+              <td class="mid"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Your time</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M5 12h14"/></svg>Depends</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>High</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Often tacky</span></td>
+            </tr>
+            <tr>
+              <td>Freelancer</td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Inconsistent</span></td>
+              <td class="mid"><span class="ico"><svg class="ico-neu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M5 12h14"/></svg>Varies</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Unpredictable</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>None</span></td>
+              <td class="mid"><span class="ico"><svg class="ico-neu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M5 12h14"/></svg>Medium</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+            </tr>
+            <tr>
+              <td>Traditional shoot</td>
+              <td class="mid"><span class="ico"><svg class="ico-pos" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>High</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Thousands</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Weeks</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Rare</span></td>
+              <td class="mid"><span class="ico"><svg class="ico-neu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M5 12h14"/></svg>Medium</span></td>
+              <td class="weak"><span class="ico"><svg class="ico-neg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Costly</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cmp-hint">← swipe to see all columns →</div>
     </div>
   </section>
 
